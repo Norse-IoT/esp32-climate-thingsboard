@@ -1,0 +1,4 @@
+*.svd
+debug_custom.json
+debug.cfg
+.DS_Store
