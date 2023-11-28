@@ -30,7 +30,7 @@ ThingsBoard by ThingsBoard Team: 0.2.0
 
 // See https://thingsboard.io/docs/getting-started-guides/helloworld/ 
 // to understand how to obtain an access token
-#define TOKEN     "sms2pt"
+#define TOKEN     "21asd7"
 // 001: 21asd7 
 // 002: lkaskk
 // 003: 2sgg23
@@ -81,6 +81,9 @@ int send_passed = 0;
 void setup() {
   // Initialize serial for debugging
   Serial.begin(SERIAL_BAUD);
+
+  pinMode(LED_BUILTIN, OUTPUT);
+
   WiFi.begin(WIFI_AP_NAME, WIFI_PASSWORD);
   
   InitWiFi();
@@ -88,6 +91,7 @@ void setup() {
   // Initialize temperature sensor
   dht.setup(DHT_PIN, DHTesp::DHTTYPE);
 }
+
 
 // Main application loop
 void loop() {
@@ -133,6 +137,7 @@ void loop() {
       Serial.print("c / ");
       Serial.print(measurements.humidity);
       Serial.println("%).");
+      blinkLED(1,250,0);
     }
 
     send_passed = 0;
@@ -154,7 +159,19 @@ void InitWiFi()
     delay(500);
     Serial.print(".");
   }
+  
+  blinkLED(3,120,120);
+
   Serial.println("");
   Serial.print("Connected to AP with IP address ");
   Serial.println(WiFi.localIP());
+}
+
+void blinkLED(int numberOfFlashes, int durationOn, int durationOff) {
+  for(int i = 0; i < numberOfFlashes; i++){
+    digitalWrite(LED_BUILTIN, HIGH);
+    delay(durationOn);
+    digitalWrite(LED_BUILTIN, LOW);
+    delay(durationOff);
+  }
 }
