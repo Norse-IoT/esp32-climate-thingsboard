@@ -3,7 +3,7 @@ Temp and humidity sensor connected to ThingsBoard
 
 ArduinoJSON by Benoit Blanchon: 6.20.1
 ArduinoHttpClient by Arduino: 0.5.0
-DHT sensor library by begee_tokyo: 1.1.9
+DHT sensor library by begee_tokyo: 1.19
 PubSubClient by Nick O'Leary: 2.8
 ThingsBoard by ThingsBoard Team: 0.2.0
 
