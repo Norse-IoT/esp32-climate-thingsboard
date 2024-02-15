@@ -8,8 +8,6 @@
 #define TOKEN     "daex3l"
 String teamNumber = "H";
 #define THINGSBOARD_SERVER  "10.0.1.2" 
-#define WIFI_AP_NAME        ""
-#define WIFI_PASSWORD       ""
 #define SERIAL_BAUD 115200 // 115200 is the NorseIoT club standard
 WiFiClient espClient;
 ThingsBoard tb(espClient);

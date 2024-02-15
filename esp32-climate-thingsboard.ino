@@ -21,10 +21,14 @@ void InitWiFi();
 void blinkLED(int, int, int);
 void centerAndPrintLine(String, int);
 
+
+#define WIFI_AP_NAME        ""
+#define WIFI_PASSWORD       ""
+
 // NOTE: change the letter on this:
 #include "board_code/starter_code_a.cpp"
 
-// definitions
+// common definitions
 void blinkLED(int numberOfFlashes, int durationOn, int durationOff) {
   for (int i = 0; i < numberOfFlashes; i++) {
     digitalWrite(LED_BUILTIN, HIGH);
