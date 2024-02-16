@@ -6,7 +6,7 @@
 #define DHTTYPE    DHT22 // DHT11, DHT22, DHT21
 #define DHT_PIN    4
 #define TOKEN     "21asd7"
-String teamNumber = "A";
+String teamNumber = "R";
 #define THINGSBOARD_SERVER  "10.0.1.2" 
 #define WIFI_AP_NAME        ""
 #define WIFI_PASSWORD       ""
