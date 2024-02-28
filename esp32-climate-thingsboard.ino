@@ -30,23 +30,33 @@ ThingsBoard by ThingsBoard Team: 0.2.0
 
 // See https://thingsboard.io/docs/getting-started-guides/helloworld/ 
 // to understand how to obtain an access token
-#define TOKEN     "21asd7"
-// 001: 21asd7 
-// 002: lkaskk
-// 003: 2sgg23
-// 004: 24lehs
-// 005: 890wkd
-// 006: 1rodx2
-// 007: q3qh1n
-// 008: daex3l
-// 009: 2bwa4z
-// 010: wpc89e
-// 011: en4mea
-// 012: sms2pt
-// 013: xvw0bc
-// 014: owooj1
-// 015: 92j3vp
-// 016: x98xgy
+#define TOKEN     "x98xgy"
+// A: x98xgy 
+// B: 21asd7
+// C: lkaskk
+// D: 2sgg23
+// E: 24lehs
+// F: 890wkd
+// G: 1rodx2
+// H: q3qh1n
+// I: daex3l
+// J: 2bwa4z
+// K: wpc89e
+// L: en4mea
+// M: sms2pt
+// N: xvw0bc
+// O: owooj1
+// P: 92j3vp
+// Q: 0iJh56
+// R: t71lvv
+// S: 28yu64
+// T: 8hj509
+// U: hnb7nz
+// V: v92yyz
+// W: 00op7s
+// X: 265v6l
+// Y: x3nxtx
+// Z: l8yss2
 
 // ThingsBoard server instance.
 #define THINGSBOARD_SERVER  "10.0.1.2" 
