@@ -57,6 +57,7 @@ ThingsBoard by ThingsBoard Team: 0.2.0
 // X: 265v6l
 // Y: x3nxtx
 // Z: l8yss2
+// 000-Instructor: gho822
 
 // ThingsBoard server instance.
 #define THINGSBOARD_SERVER  "10.0.1.2" 
