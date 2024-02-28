@@ -1,70 +1,59 @@
 /*
 Temp and humidity sensor connected to ThingsBoard
-
-ArduinoJSON by Benoit Blanchon: 6.20.1
-ArduinoHttpClient by Arduino: 0.5.0
-DHT sensor library by begee_tokyo: 1.19
-PubSubClient by Nick O'Leary: 2.8
-ThingsBoard by ThingsBoard Team: 0.2.0
-
 */
 
  // Baud rate for serial output
-#define SERIAL_BAUD    115200
+#define SERIAL_BAUD    // how fast should our computer talk to the microcontroller? Needs an integer like 115200
 
-#include <DHTesp.h>
-#ifdef ESP32
-  #include <WiFi.h>
-#else
-  #include <ESP8266WiFi.h>
-#endif
+// Include the necessary code libraries. They are DHTesp.h,  WiFi.h, and ThingsBoard.h. The format is:
+// #include <TheNameOfTheLibrary>
 
-#include <ThingsBoard.h>
 
 
 // Which model of humidity/temp sensor?
-#define DHTTYPE    DHT22 // DHT11, DHT22, DHT21
+#define DHTTYPE    // DHT11, DHT22, DHT21
 
 // ESP32 pin used to query the sensor
-#define DHT_PIN    4
+#define DHT_PIN // This needs an integer for the specific pin
 
 // See https://thingsboard.io/docs/getting-started-guides/helloworld/ 
 // to understand how to obtain an access token
-#define TOKEN     "x98xgy"
-// A: x98xgy 
-// B: 21asd7
-// C: lkaskk
-// D: 2sgg23
-// E: 24lehs
-// F: 890wkd
-// G: 1rodx2
-// H: q3qh1n
-// I: daex3l
-// J: 2bwa4z
-// K: wpc89e
-// L: en4mea
-// M: sms2pt
-// N: xvw0bc
-// O: owooj1
-// P: 92j3vp
-// Q: 0iJh56
-// R: t71lvv
-// S: 28yu64
-// T: 8hj509
-// U: hnb7nz
-// V: v92yyz
-// W: 00op7s
-// X: 265v6l
-// Y: x3nxtx
-// Z: l8yss2
+#define TOKEN     // This needs a string from the list below that matches the number of your device
+// 000: x98xgy 
+// 001: 21asd7
+// 002: lkaskk
+// 003: 2sgg23
+// 004: 24lehs
+// 005: 890wkd
+// 006: 1rodx2
+// 007: q3qh1n
+// 008: daex3l
+// 009: 2bwa4z
+// 010: wpc89e
+// 011: en4mea
+// 012: sms2pt
+// 013: xvw0bc
+// 014: owooj1
+// 015: 92j3vp
+// 016: 0iJh56
 
-// ThingsBoard server instance.
-#define THINGSBOARD_SERVER  "10.0.1.2" 
+// ThingsBoard server. 
+#define THINGSBOARD_SERVER   //This is a string with an IP address value of 10.0.1.2
 
 // WiFi access point
-#define WIFI_AP_NAME        ""
+#define WIFI_AP_NAME        //This is a string with the value NORSEIOT2G
 // WiFi password
-#define WIFI_PASSWORD       ""
+#define WIFI_PASSWORD       //This is a string with the value freezerburn15
+
+// How often should we send temperature/humidity data (in milliseconds)?
+int send_delay =  ;//need an integer here!
+
+
+
+
+
+
+
 
 // Initialize ThingsBoard client
 WiFiClient espClient;
@@ -80,9 +69,6 @@ DHTesp dht;
 
 // Main application loop delay
 int quant = 20;
-
-// Period of sending a temperature/humidity data in milliseconds.
-int send_delay = 2000;
 
 // Time passed after temperature/humidity data was sent in milliseconds.
 int send_passed = 0;
