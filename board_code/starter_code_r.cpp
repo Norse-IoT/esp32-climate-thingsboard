@@ -18,7 +18,7 @@ int send_delay = 2000;
 int send_passed = 0;
 
 // Separate each line with a \n. 
-String inputMessage = "and the\nINTERalliance\nwelcome Team " + teamNumber + " to TechOlympics 2024! \n";
+String inputMessage = "welcome Team " + teamNumber + " to NKU! \n";
 
 
 void setup() {
